@@ -12,7 +12,7 @@ public class MinimumRopeCostTests {
     @DataProvider(name = "testData")
     public Object[][] testData() {
         return new Object[][]{
-                {new int[]{4,3,2,6}, 28},
+                {new int[]{4,3,2,6}, 27},
                 {new int []{-5,8,3,4},10},
                 {new int[]{}, 0},
                 {new int[]{15, 35, -6, 102}, 199},
