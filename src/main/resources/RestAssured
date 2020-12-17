@@ -1,0 +1,127 @@
+4.1 Webservice
+
+
+Use the below webservice to perform the Webservice testing
+http://www.dneonline.com/calculator.asmx
+
+The webservice exposes 4 methods. Test all the 4 methods with different combinations. Testing of each method gets 2 mark. There are some defects in the application. You need to find as many defects as possible. Each defect detection gets 1 extra mark.
+
+You can use any of the clients of your choice for for testing. Provide the screenshots to mentor for attaching the marks.
+
+Minimal marks to get : 8 (testing all the methods)
+
+Maximum marks : 20
+
+4.2 Rest
+
+Base URL  -> https://jsonplaceholder.typicode.com
+Resources available -->
+/posts
+/comments
+/albums
+/photos
+/todos
+/users
+
+Task
+1. Verify the number of resources at each resource end point (6 marks)
+2. For each type of resource
+	a. Get a specific resource data (6 marks)
+		i. verify the response code
+		ii. Verify the response body
+	b. Modify a specific resource data (6 marks)
+		i. verify the response code
+		ii. Verify the response body
+	c. Delete a specific resource (6 marks)
+		i. verify the response code
+		ii. Verify the response body
+	d. Create your own resource (6 marks)
+		i. verify the response code
+		ii. Verify the response body
+
+Each defect found and reported would get an extra mark.
+
+Base Marks : 30
+
+4.3 Rest assured
+
+Maximum marks --> 25 marks
+
+========================
+
+Task - 1 (5 Marks):
+
+Find the event names which are in English(En) language from below.
+Verify the list of names returned with expected list of values
+
+End Point : https://events.epam.com/api/v2/events
+
+Hint:
+- Use http://jsonviewer.stack.hu/ to remove/format the JSON response
+- Use https://groovy-playground.appspot.com/ to verify the Gpath expression you write
+
+	import groovy.json.JsonSlurper
+
+	def jsonSlurper = new JsonSlurper()
+	def object = jsonSlurper.parseText(
+          '{Your JSON response here}'
+)
+
+println(object)
+
+===============================================================
+Task - 2 (20 marks):
+
+openweathermap.org exposes APIs for reading the weather data from various cities. The documentation is at https://openweathermap.org/guide#how
+
+1. Use the below weather end-point to get the current weather details of Hyderabad
+	http://api.openweathermap.org/data/2.5/weather?q=hyderabad&appid={your_key}
+
+2. Use the coordinates (longitude and latitude) of of the above response to the end-point
+http://api.openweathermap.org/data/2.5/weather?lat={latitude}&lon={longitude}&appid={your_key} and verify the below in response
+	- name --> Hyderabad
+	- sys.country --> IN
+	- main.temp_min --> greater than 0
+	- main.temp --> greater than 0
+
+Hint:
+- You need to register in the application and get your API key as mentioned here in your API requests
+
+4.4 Rest Assured
+
+Use the documentation listed at http://dummy.restapiexample.com/ to perform the task below.
+
+1. Get the list of all employees.
+	a. verify the count of employees.
+2. Create an empoyee
+	a. verify that employee is created successfully.
+	b. verify the count of employees is increased by +1
+3. get the details of the employee created in step 2
+	a. verify all the details given in step2
+4. update the details of the employee update the salary and age
+	a. verify the update is successful.
+5. get the details of the employee created in step 2
+	a. verify the updated details in step 4.
+6. delete the employee created in step 2.
+	a. verify the delete is successful.
+	b. verify the total list of employees is decreased by -1
+
+At every step above verify the below details whereever possible.
+	a. Status Code
+	b. Status Line
+	c. content-type
+	d. Success Code
+	e. content-encoding
+
+==================================================================
+
+Scoring criteria
+--> Each completed step gets 10 marks : 10*6 = 60 marks
+
+Maximum marks : 60
+
+---Logger home task----
+
+
+
+
